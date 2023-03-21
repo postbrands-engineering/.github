@@ -18,7 +18,17 @@ We have the fastest API integration on the market and we accredit the operation 
 
 `POST https://transaction.softbird.com.br/invoice/generate`
 
-    curl -i -H 'Accept: application/json' -d 
+    curl --request POST \
+     --url https://transaction.softbird.com.br/invoice/generate \
+     --header 'accept: application/json' \
+     --header 'authorization: Basic tokenAuth ' \
+     --header 'content-type: application/json' \
+     --data ' {"payer_name": "Julio Campos",
+      "document": "06054778170",
+      "expiration": 18600,
+      "additionalInformation": "Pix gerado para pagar invoice",
+      "alertClient": "Pague antes do vencimento",
+      "amount": 15.30 }'
 
 ### Response
 
