@@ -17,7 +17,7 @@ We have the fastest API integration on the market and we accredit the operation 
 
 ### Request
 
-`POST https://transaction.softbird.com.br/invoice/generate`
+`POST https://transaction.softbird.com.br/v1/pix/invoice/generate`
 
     curl --request POST \
      --url https://transaction.softbird.com.br/invoice/generate \
