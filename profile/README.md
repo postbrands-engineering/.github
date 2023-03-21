@@ -8,10 +8,11 @@ We are a Brazilian online payment technology company. We work to simplify financ
 
 We have the fastest API integration on the market and we accredit the operation of our customers in the main Brazilian banks, taking care of all the bureaucracy so that they have more time to focus on the business.
 
-## Authentication
+## Authentication -> 
 
-    You can get the token directly from the administration dashboard. https://banking.softbird.com.br/dashboard/development
-
+    You can get the token directly from the administration dashboard. 
+    
+-> [Click here to go to dashboard](https://banking.softbird.com.br/dashboard/development)
 ## Generate invoice
 
 ### Request
@@ -29,6 +30,14 @@ We have the fastest API integration on the market and we accredit the operation 
       "additionalInformation": "Pix gerado para pagar invoice",
       "alertClient": "Pague antes do vencimento",
       "amount": 15.30 }'
+      
+-> {{payer_name}} -> The name and surname of the player where the pix will be generated and the code shown.
+-> {{document}} -> The customer's CPF code, is is CNPJ change the element cpf to cnpj.
+-> {{expiration}} -> The expiration is calculated in seconds, it depends on the demand, it can last up to 1 month.
+-> {{additionalInformation}} -> The 'value' is what will appear to the player at the time of deposit and the 'key' will apapear on the bottom line to identify it. I recommend not using player and using random acronyms to know which game that guy is from.
+-> {{alertClient}} -> The 'alertClient' is the value linked to the key as additional information for billing.
+-> {{amount}} -> It should only be double numbers, that is, if you put 25 only the server will reject it. It must be 25.00 in double number.      
+      
 
 ### Response
 
