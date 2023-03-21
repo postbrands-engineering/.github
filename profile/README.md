@@ -16,7 +16,7 @@ We have the fastest API integration on the market and we accredit the operation 
 
 ### Request
 
-`POST https://clientside.softbird.com.br/invoice/generate`
+`POST https://transaction.softbird.com.br/invoice/generate`
 
     curl -i -H 'Accept: application/json' -d 
 
