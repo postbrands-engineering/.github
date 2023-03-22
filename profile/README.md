@@ -19,8 +19,10 @@ We have the fastest API integration on the market and we accredit the operation 
 
 `POST https://transaction.softbird.com.br/v1/pix/invoice/generate`
 
+`SHELL`
+
     curl --request POST \
-     --url https://transaction.softbird.com.br/invoice/generate \
+     --url https://transaction.softbird.com.br/v1/pix/invoice/generate \
      --header 'accept: application/json' \
      --header 'authorization: Basic tokenAuth ' \
      --header 'content-type: application/json' \
@@ -31,6 +33,41 @@ We have the fastest API integration on the market and we accredit the operation 
       "alertClient": "Pague antes do vencimento",
       "amount": "15.30" }'
       
+
+`PHP`
+
+    <?php
+
+    $curl = curl_init();
+
+    $payload = json_encode(
+        array(
+            "payer_name" => "Julio Campos",
+            "document" => "06054778170",
+            "expiration" => 18600,
+            "additionalInformation" => "Pix gerado para pagar invoice",
+            "alertClient" => "Pague antes do vencimento",
+            "amount" => "15.30"
+        )
+    );
+
+    curl_setopt_array($curl, [
+        CURLOPT_URL => "https://transaction.softbird.com.br/v1/pix/invoice/generate",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => $payload,
+        CURLOPT_HTTPHEADER => [
+            "Accept: application/json",
+            "authorization: Bearer YOURAUTHTOKEN",
+            "Content-Type: application/json"
+        ],
+    ]);
+
+    $response = curl_exec($curl);
+
+    ?>
 - {tokenAuth} -> Get on integration dashboard.
 - {payer_name} -> The name and surname of the player where the pix will be generated and the code shown.
 - {document} -> The customer's CPF code, is is CNPJ change the element cpf to cnpj.
