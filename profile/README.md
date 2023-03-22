@@ -42,28 +42,28 @@ We have the fastest API integration on the market and we accredit the operation 
 
 ### Response
 
-{
-    "transactionId": 1464038550,
-    "status": "ACTIVE",
-    "client": {
-        "name": "Julio Campos",
-        "cpf": "06054778170"
-    },
-    "amount": {
-        "charged": 15.3
-    },
-    "pix": {
-        "paymentTo": "b9111f34-9def-469d-8b97-e012d69014cd",
-        "type": "COB",
-        "qrcode": "https://clientside.softbird.com.br/v1/invoice/qrcode/1464038550",
-        "copyandpaste": "00020101021226910014br.gov.bcb.pix2569api.developer.btgpactual.com/v1/p/v2/84737b5a68814ac38fe9464c38ed3cd75204899953039865802BR5925TUNNEL VENTURE CAPITAL GR6009Sao Paulo61080145200162070503***6304044B",
-        "locationid": "31529069"
-    },
-    "additionalInformation": {
-        "value": "Pix gerado para pagar invoice",
-        "key": "Pague antes do vencimento"
-    },
-    "createAt": "2023-03-22T01:25:00.7300423+00:00",
-    "lastUpdate": "2023-03-22T01:25:00.7300423+00:00",
-    "transactionIdentification": "kk6g232xel65a0daee4dd13kk1464038550"
-}
+    {
+        "transactionId": 1464038550,
+        "status": "ACTIVE",
+        "client": {
+            "name": "Julio Campos",
+            "cpf": "06054778170"
+        },
+        "amount": {
+            "charged": 15.3
+        },
+        "pix": {
+            "paymentTo": "b9111f34-9def-469d-8b97-e012d69014cd",
+            "type": "COB",
+            "qrcode": "https://clientside.softbird.com.br/v1/invoice/qrcode/1464038550",
+            "copyandpaste": "00020101021226910014br.gov.bcb.pix2569api.developer.btgpactual.com/v1/p/v2/84737b5a68814ac38fe9464c38ed3cd75204899953039865802BR5925TUNNEL VENTURE CAPITAL GR6009Sao Paulo61080145200162070503***6304044B",
+            "locationid": "31529069"
+        },
+        "additionalInformation": {
+            "value": "Pix gerado para pagar invoice",
+            "key": "Pague antes do vencimento"
+        },
+        "createAt": "2023-03-22T01:25:00.7300423+00:00",
+        "lastUpdate": "2023-03-22T01:25:00.7300423+00:00",
+        "transactionIdentification": "kk6g232xel65a0daee4dd13kk1464038550"
+    }
