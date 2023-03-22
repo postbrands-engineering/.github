@@ -68,6 +68,31 @@ We have the fastest API integration on the market and we accredit the operation 
     $response = curl_exec($curl);
 
     ?>
+    
+`NodeJS`
+
+    const axios = require('axios');
+    const invoiceParams = JSON.stringify({
+        "payer_name": "Julio Campos",
+        "document": "06054778170",
+        "expiration": 18600,
+        "additionalInformation": "Pix gerado para pagar invoice",
+        "alertClient": "Pague antes do vencimento",
+        "amount": "15.30"
+    });
+
+    axios.post('https://transaction.softbird.com.br/v1/pix/invoice/generate', invoiceParams, {
+        headers: {
+            'Authorization': `Bearer YOURAUTHTOKEN`
+        }
+    })
+        .then((res) => {
+            console.log(res.data)
+        })
+        .catch((error) => {
+            console.error(error)
+        })
+
 - {tokenAuth} -> Get on integration dashboard.
 - {payer_name} -> The name and surname of the player where the pix will be generated and the code shown.
 - {document} -> The customer's CPF code, is is CNPJ change the element cpf to cnpj.
