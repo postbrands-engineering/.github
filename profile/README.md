@@ -29,8 +29,9 @@ We have the fastest API integration on the market and we accredit the operation 
       "expiration": 18600,
       "additionalInformation": "Pix gerado para pagar invoice",
       "alertClient": "Pague antes do vencimento",
-      "amount": 15.30 }'
+      "amount": "15.30" }'
       
+- {tokenAuth} -> Get on integration dashboard.
 - {payer_name} -> The name and surname of the player where the pix will be generated and the code shown.
 - {document} -> The customer's CPF code, is is CNPJ change the element cpf to cnpj.
 - {expiration} -> The expiration is calculated in seconds, it depends on the demand, it can last up to 1 month.
