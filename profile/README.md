@@ -129,3 +129,19 @@ We have the fastest API integration on the market and we accredit the operation 
         "lastUpdate": "2023-03-22T01:25:00.7300423+00:00",
         "transactionIdentification": "kk6g232xel65a0daee4dd13kk1464038550"
     }
+   
+
+### Webhook Response
+
+    {
+        "receiverTaxID": "48931870000100",
+        "client": {
+            "name": "TUNNEL VENTURE CAPITAL GROUP LTDA",
+            "taxid": "48931870000100"
+        },
+        "status": "CONFIRMED",
+        "amount": "1.00",
+        "type": "INVOICE_DEPOSIT",
+        "transactionId": "1467593045",
+        "transactionIdentification": "kk6g232xel65a0daee4dd13kk1467593045"
+    }
