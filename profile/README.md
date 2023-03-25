@@ -131,7 +131,7 @@ We have the fastest API integration on the market and we accredit the operation 
     }
    
 
-### Webhook Response
+### Webhook Response when PAID
 
     {
         "receiverTaxID": "48931870000100",
@@ -140,8 +140,8 @@ We have the fastest API integration on the market and we accredit the operation 
             "taxid": "48931870000100"
         },
         "status": "CONFIRMED",
-        "amount": "1.00",
+        "amount": "15.3",
         "type": "INVOICE_DEPOSIT",
-        "transactionId": "1467593045",
-        "transactionIdentification": "kk6g232xel65a0daee4dd13kk1467593045"
+        "transactionId": "1464038550",
+        "transactionIdentification": "kk6g232xel65a0daee4dd13kk1464038550"
     }
