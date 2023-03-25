@@ -24,7 +24,7 @@ We have the fastest API integration on the market and we accredit the operation 
     curl --request POST \
      --url https://transaction.softbird.com.br/v1/pix/invoice/generate \
      --header 'accept: application/json' \
-     --header 'authorization: Basic tokenAuth ' \
+     --header 'authorization: Bearer tokenAuth ' \
      --header 'content-type: application/json' \
      --data ' {"payer_name": "Julio Campos",
       "document": "06054778170",
