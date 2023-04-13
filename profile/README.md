@@ -145,3 +145,104 @@ We have the fastest API integration on the market and we accredit the operation 
         "transactionId": "1464038550",
         "transactionIdentification": "kk6g232xel65a0daee4dd13kk1464038550"
     }
+    
+## Transfer to CPF/CNPJ account via API
+
+### Request
+
+`POST https://transaction.softbird.com.br/v1/pix/transaction/transfer`
+
+`SHELL`
+
+    curl --request POST \
+     --url https://transaction.softbird.com.br/v1/pix/transaction/transfer \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer tokenAuth ' \
+     --header 'content-type: application/json' \
+     --data ' {"taxID": "06054778170", "amount": "1.00" }'
+      
+
+`PHP`
+
+    <?php
+
+    $curl = curl_init();
+
+    $payload = json_encode(
+        array(
+            "taxID" => "06054778170",
+            "amount" => "1.00"
+        )
+    );
+
+    curl_setopt_array($curl, [
+        CURLOPT_URL => "https://transaction.softbird.com.br/v1/pix/transaction/transfer",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => $payload,
+        CURLOPT_HTTPHEADER => [
+            "Accept: application/json",
+            "authorization: Bearer YOURAUTHTOKEN",
+            "Content-Type: application/json"
+        ],
+    ]);
+
+    $response = curl_exec($curl);
+
+    ?>
+    
+`NodeJS`
+
+    const axios = require('axios');
+    const invoiceParams = JSON.stringify({
+        "taxID": "06054778170",
+        "amount": "1.00"
+    });
+
+    axios.post('https://transaction.softbird.com.br/v1/pix/transaction/transfer', invoiceParams, {
+        headers: {
+            'Authorization': `Bearer YOURAUTHTOKEN`
+        }
+    })
+        .then((res) => {
+            console.log(res.data)
+        })
+        .catch((error) => {
+            console.error(error)
+        })
+
+- {tokenAuth} -> Get on integration dashboard.
+- {document} -> The Pix key can be a random key, with digits generated at the time of the transaction, or it can be your email, CPF or CNPJ and phone number
+- {amount} -> Amount to transfer.     
+      
+
+### Response
+
+  {
+    "receiverTaxID": "47850280000190",
+    "transactionId": 1492890669,
+    "status": "SUCCESS",
+    "slipAuth": "CONFIDENTIAL",
+    "endToEndId": "CONFIDENTIAL",
+    "amount": "1.00",
+    "date": "2023-04-13 14:10:27",
+    "clientCode": "CONFIDENTIAL",
+    "extract": "CONFIDENTIAL",
+    "debitParty": {
+        "account": "000000",
+        "branch": 30,
+        "taxId": "47850280000190",
+        "accountType": "CACC",
+        "name": "SOFTBIRD INSTITUICAO DE PAGAMENTO LTDA"
+    },
+    "creditParty": {
+        "key": "06054778170",
+        "bank": "90400888",
+        "account": "00000000000010388079",
+        "branch": 2185,
+        "taxId": "06054778170",
+        "accountType": "CACC",
+        "name": "ADLER LOPES DE MORAIS"
+    }
