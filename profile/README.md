@@ -220,29 +220,31 @@ We have the fastest API integration on the market and we accredit the operation 
 
 ### Response
 
-  {
-    "receiverTaxID": "47850280000190",
-    "transactionId": 1492890669,
-    "status": "SUCCESS",
-    "slipAuth": "CONFIDENTIAL",
-    "endToEndId": "CONFIDENTIAL",
-    "amount": "1.00",
-    "date": "2023-04-13 14:10:27",
-    "clientCode": "CONFIDENTIAL",
-    "extract": "CONFIDENTIAL",
-    "debitParty": {
-        "account": "000000",
-        "branch": 30,
-        "taxId": "47850280000190",
-        "accountType": "CACC",
-        "name": "SOFTBIRD INSTITUICAO DE PAGAMENTO LTDA"
-    },
-    "creditParty": {
-        "key": "06054778170",
-        "bank": "90400888",
-        "account": "00000000000010388079",
-        "branch": 2185,
-        "taxId": "06054778170",
-        "accountType": "CACC",
-        "name": "ADLER LOPES DE MORAIS"
-    }
+      {
+        "receiverTaxID": "47850280000190",
+        "transactionId": 1492890669,
+        "status": "SUCCESS",
+        "slipAuth": "CONFIDENTIAL",
+        "endToEndId": "CONFIDENTIAL",
+        "amount": "1.00",
+        "date": "2023-04-13 14:10:27",
+        "clientCode": "CONFIDENTIAL",
+        "extract": "CONFIDENTIAL",
+        "debitParty": {
+            "account": "000000",
+            "branch": 30,
+            "taxId": "47850280000190",
+            "accountType": "CACC",
+            "name": "SOFTBIRD INSTITUICAO DE PAGAMENTO LTDA"
+        },
+        "creditParty": {
+            "key": "06054778170",
+            "bank": "90400888",
+            "account": "00000000000010388079",
+            "branch": 2185,
+            "taxId": "06054778170",
+            "accountType": "CACC",
+            "name": "ADLER LOPES DE MORAIS"
+        }
+        
+.
