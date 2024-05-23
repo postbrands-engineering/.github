@@ -12,7 +12,7 @@ We have the fastest API integration on the market and we accredit the operation 
 
     You can get the token directly from the administration dashboard. 
     
--> [Click here to go to dashboard](https://banking.postbrands.com.br/dashboard/development)
+-> [Click here to go to dashboard](https://app.postbrands.com.br/dashboard/development)
 ## Generate invoice
 
 ### Request
