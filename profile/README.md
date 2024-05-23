@@ -1,6 +1,6 @@
-# Softbird API Clientside 
+# Postbrands API Clientside 
 
-Softbird is a brazilian fintech specializing in national and crossborder instant payments.
+Postbrands is a brazilian fintech specializing in national and crossborder instant payments.
 
 Our technological solution for instant payments is focused on conversion and makes bureaucracy easier for companies headquartered abroad with customers in Brazil.
 
@@ -12,17 +12,17 @@ We have the fastest API integration on the market and we accredit the operation 
 
     You can get the token directly from the administration dashboard. 
     
--> [Click here to go to dashboard](https://banking.softbird.com.br/dashboard/development)
+-> [Click here to go to dashboard](https://banking.postbrands.com.br/dashboard/development)
 ## Generate invoice
 
 ### Request
 
-`POST https://transaction.softbird.com.br/v1/pix/invoice/generate`
+`POST https://transaction.postbrands.com.br/v1/pix/invoice/generate`
 
 `SHELL`
 
     curl --request POST \
-     --url https://transaction.softbird.com.br/v1/pix/invoice/generate \
+     --url https://transaction.postbrands.com.br/v1/pix/invoice/generate \
      --header 'accept: application/json' \
      --header 'authorization: Bearer tokenAuth ' \
      --header 'content-type: application/json' \
@@ -52,7 +52,7 @@ We have the fastest API integration on the market and we accredit the operation 
     );
 
     curl_setopt_array($curl, [
-        CURLOPT_URL => "https://transaction.softbird.com.br/v1/pix/invoice/generate",
+        CURLOPT_URL => "https://transaction.postbrands.com.br/v1/pix/invoice/generate",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => "",
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
@@ -81,7 +81,7 @@ We have the fastest API integration on the market and we accredit the operation 
         "amount": "15.30"
     });
 
-    axios.post('https://transaction.softbird.com.br/v1/pix/invoice/generate', invoiceParams, {
+    axios.post('https://transaction.postbrands.com.br/v1/pix/invoice/generate', invoiceParams, {
         headers: {
             'Authorization': `Bearer YOURAUTHTOKEN`
         }
@@ -117,7 +117,7 @@ We have the fastest API integration on the market and we accredit the operation 
         "pix": {
             "paymentTo": "b9111f34-9def-469d-8b97-e012d69014cd",
             "type": "COB",
-            "qrcode": "https://clientside.softbird.com.br/v1/invoice/qrcode/1464038550",
+            "qrcode": "https://clientside.postbrands.com.br/v1/invoice/qrcode/1464038550",
             "copyandpaste": "00020101021226910014br.gov.bcb.pix2569api.developer.btgpactual.com/v1/p/v2/84737b5a68814ac38fe9464c38ed3cd75204899953039865802BR5925TUNNEL VENTURE CAPITAL GR6009Sao Paulo61080145200162070503***6304044B",
             "locationid": "31529069"
         },
@@ -150,12 +150,12 @@ We have the fastest API integration on the market and we accredit the operation 
 
 ### Request
 
-`POST https://transaction.softbird.com.br/v1/pix/transaction/transfer`
+`POST https://transaction.postbrands.com.br/v1/pix/transaction/transfer`
 
 `SHELL`
 
     curl --request POST \
-     --url https://transaction.softbird.com.br/v1/pix/transaction/transfer \
+     --url https://transaction.postbrands.com.br/v1/pix/transaction/transfer \
      --header 'accept: application/json' \
      --header 'authorization: Bearer tokenAuth ' \
      --header 'content-type: application/json' \
@@ -176,7 +176,7 @@ We have the fastest API integration on the market and we accredit the operation 
     );
 
     curl_setopt_array($curl, [
-        CURLOPT_URL => "https://transaction.softbird.com.br/v1/pix/transaction/transfer",
+        CURLOPT_URL => "https://transaction.postbrands.com.br/v1/pix/transaction/transfer",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => "",
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
@@ -201,7 +201,7 @@ We have the fastest API integration on the market and we accredit the operation 
         "amount": "1.00"
     });
 
-    axios.post('https://transaction.softbird.com.br/v1/pix/transaction/transfer', invoiceParams, {
+    axios.post('https://transaction.postbrands.com.br/v1/pix/transaction/transfer', invoiceParams, {
         headers: {
             'Authorization': `Bearer YOURAUTHTOKEN`
         }
@@ -235,7 +235,7 @@ We have the fastest API integration on the market and we accredit the operation 
             "branch": 30,
             "taxId": "47850280000190",
             "accountType": "CACC",
-            "name": "SOFTBIRD INSTITUICAO DE PAGAMENTO LTDA"
+            "name": "POSTBRANDS INSTITUICAO DE PAGAMENTO LTDA"
         },
         "creditParty": {
             "key": "06054778170",
